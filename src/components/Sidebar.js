@@ -1,14 +1,25 @@
 import { Link } from "react-router-dom";
 
+import { RectangleGroupIcon, BookOpenIcon, Cog8ToothIcon } from '@heroicons/react/24/solid';
+
 export default function Sidebar() {
     return(
         <div className="flex flex-col justify-between items-stretch border-r w-56 h-screen fixed">
             <div>
                 <h1 className="text-3xl p-6 font-extrabold">Then</h1>
                 <nav className="flex flex-col">
-                    <Link to="/" className="p-2 mx-1 rounded-md hover:bg-amber-600 hover:text-white font-medium">Timeline</Link>
-                    <Link to="/journal" className="p-2 mx-1 rounded-md hover:bg-amber-600 hover:text-white font-medium">Journal</Link>
-                    <Link to="/settings" className="p-2 mx-1 rounded-md hover:bg-amber-600 hover:text-white font-medium">Settings</Link>
+                    <Link to="/" className="flex justify-start gap-2 p-2 mx-1 rounded-md text-slate-600 hover:bg-amber-600 hover:text-white font-medium">
+                        <RectangleGroupIcon className="h-6 w-6" />
+                        <p>Timeline</p>
+                    </Link>
+                    <Link to="/journal" className="flex justify-start gap-2 p-2 mx-1 rounded-md text-slate-600 hover:bg-amber-600 hover:text-white font-medium">
+                        <BookOpenIcon className="h-6 w-6" />
+                        <p>Journal</p>
+                    </Link>
+                    <Link to="/settings" className="flex justify-start gap-2 p-2 mx-1 rounded-md text-slate-600 hover:bg-amber-600 hover:text-white font-medium">
+                        <Cog8ToothIcon className="h-6 w-6" />
+                        <p>Settings</p>
+                    </Link>
                 </nav>
             </div>
             <div className="flex justify-start items-center gap-2 p-4 border-t">
